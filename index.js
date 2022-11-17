@@ -1,24 +1,147 @@
-const convertir = (mon,val,dor,eur)=>{
-    let resultado = 0; 
-    if (mon === 'Dolar') {
-         resultado = val / dor;
-    } else {
-         resultado = val / eur;
-    } 
-    return resultado;
- }
- 
- let bienvenido = alert('Bienvenido a la casa de cambio');
- let moneda = prompt('Seleccionar moneda a enviar: 1.Dolar 2.Euro'); 
- let valor = parseInt(prompt('Ingrese un monto'));
- let dolar = 292;
- let euro = 290;
- 
- const emc = convertir(moneda,valor,dolar,euro);
- if (moneda === 'Dolar') {
-     alert('El cambio de Pesos a Dolares es de $' + emc);
- } else if(moneda === 'Euro') {
-     alert('El cambio de Pesos a Euros es de $' + emc);
- } else {
-     alert('Tienes que completar todos los requerimientos');
- }
+class Productos {
+    constructor(id,nombre,precio,stock){
+        this.id = id;
+        this.nombre = nombre;
+        this.precio = precio;
+        this.stock = stock;
+    }
+}
+
+const productoTequenos = new Productos(1,'Tequeños',150,300);
+const productoTequeJamon = new Productos(2,'Tequeños de jamón',180,100);
+const productoPastelitosPollo = new Productos(3,'Pastelitos de pollo',185,60);
+const productoTequeNutella = new Productos(4,'Tequeños de nutella',30,200);
+const productoPastelitosCarne = new Productos(5,'Pastelitos de carne',185,60);
+
+const productosExistentes = [productoTequenos, productoTequeJamon, productoPastelitosPollo, productoTequeNutella, productoPastelitosCarne];
+
+
+const divProductos = document.getElementById('divProductos');
+
+productosExistentes.forEach(e => {
+    divProductos.innerHTML += `
+    <div id="producto${e.id} " class="card">
+    <div class="card-body">
+      <h5 class="card-title"> ${e.nombre}</h5>
+      <p class="card-text">Precio: ${e.precio}$</p>
+      <p class="card-text">Stock: ${e.stock}</p>
+      <button id="comprar" class="btn btn-primary button__edit">Comprar</button>
+    </div>
+  </div>
+    `
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
